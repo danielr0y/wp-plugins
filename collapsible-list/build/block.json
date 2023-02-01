@@ -1,0 +1,23 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "va/collapsible-list",
+  "version": "0.1.0",
+  "title": "Collapsible List",
+  "category": "text",
+  "icon": "admin-collapse",
+  "description": "Core WP list with buttons to control expand and collapse",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "listItemsToShow": {
+      "type": "number",
+      "default": 3
+    }
+  },
+  "textdomain": "collapsible-list",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

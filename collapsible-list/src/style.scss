@@ -1,0 +1,28 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-va-collapsible-list.clist-frontend {
+	&.clist-hide{
+		.wp-block-button.clist-collapse{
+			display: none;
+		}
+		@each $value in 0,1,2,3,4,5,6,7,8,9 {
+			&.show-#{$value} {
+				ul, ol{
+					li:not(:nth-child(-n+#{$value})){
+						display: none;
+					} 
+				}
+			}
+		}
+	}
+	&:not(.clist-hide){
+		.wp-block-button.clist-expand{
+			display: none;
+		}
+	}
+}
